@@ -1,0 +1,35 @@
+1.
+
+¿Qué propósito cumple el archivo main.ts en un proyecto NestJS y por qué es crucial en la configuración inicial?
+cumple la funcion de conectar todos los componentes de la aplicacion y de organizar todas las capas externas, esto sin que se inicien aún los procesos y separandose de la capa de negocio. es importante poque permite configurar las variables con las cuales se levanta el servidor.
+
+¿Qué diferencia existe entre app.module.ts y app.controller.ts? ¿Cómo se relacionan estos archivos con la modularidad y la estructura de la aplicación?
+el controller es la capa que maneja la interacción entre el mundo exterior y la lógica de negocio, mientras que el module es el que conecta los modulos, servicios y controllers y crea la forma en que estos se relacionan, todo haciendo de forma separada de la logica del negocio.
+
+
+2.
+
+¿Por qué crees que es importante modularizar la aplicación separando funcionalidades en diferentes módulos?
+esto permite que darle soporte a la app sea mucho más facil y ademas se pueda ir construyendo progresivamente la aplicación
+
+¿Cómo crees que afecta la modularidad al mantenimiento y escalabilidad de la aplicación?
+al separar component permite que se le pueda dar mantenimiento más enfocado y mucho más facil, además se pueden ir agregando o mejorando los componentes
+
+Despues de crear los archivos de los módulos, ¿qué archivos se generan y cómo se relacionan con los módulos creados?
+se crea una carpeta con el nombre del module y se crea un archivo que es modulo que configura el servicio, el modulo y el controlador de esta entidad.
+
+3.
+¿Qué sucede si defines incorrectamente un decorador en un controlador? ¿Cómo afecta esto a la funcionalidad del endpoint?
+si defines incorrectamente el decorador en el controlador esto inmediatamente rompe la aplicacion, pero el endpoint puede seguir corriendo si se ha inicializado la aplicacion y no se a tumbado mientras se desconfigura el decorador.
+pero si se tumba y se vuelve a levantar entonces el endpoint ya no responde.
+
+
+¿Por qué es importante manejar rutas dinámicas (por ejemplo, @Get(':id')) en aplicaciones que interactúan con bases de datos?
+Esto permite que los datos sensibles no tengan que viajar como query params sino que viajan en body que va oculto al publico.
+
+
+¿Qué ventajas tiene manejar la lógica de negocio en servicios en lugar de controladores?
+esto permite la separacion de responsabilidades por capaz, además permite crear encapsulamiento para mantener la consistencia de la logica atraves del ciclo de vida de la app.
+¿Cómo se relaciona la inyección de dependencias con la modularidad y la capacidad de prueba de la aplicación?
+se relaciona en la medida que como está separados por modulos, estos se pueden reutilizar en diferentes partes y tiene dependencia de uno en especifico. la modularizacion permite probar cada modulo independiente y de esta manera verificar su funcionamiento correcto.
+
