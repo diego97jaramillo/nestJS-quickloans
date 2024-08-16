@@ -33,3 +33,14 @@ esto permite la separacion de responsabilidades por capaz, además permite crear
 ¿Cómo se relaciona la inyección de dependencias con la modularidad y la capacidad de prueba de la aplicación?
 se relaciona en la medida que como está separados por modulos, estos se pueden reutilizar en diferentes partes y tiene dependencia de uno en especifico. la modularizacion permite probar cada modulo independiente y de esta manera verificar su funcionamiento correcto.
 
+¿Por qué es crucial validar los datos de entrada en una aplicación que maneja transacciones financieras?
+Porque si entran datos que no corresponden a los datos que requerimos, entonces esto puede hacer que se rompa o que se ejecute un proceso diferente al que se tenia proyectado a realizar.
+
+¿Qué podría suceder si un decorador está mal colocado o si no se aplican los pipes correctamente?
+si se pone el u decorador de una forma erronea entonces este será evaluado en el validationPipe, lo que hara que se dipare un error y no ejecute el controller
+
+¿Cómo impacta el manejo adecuado de excepciones en la experiencia del usuario y en la seguridad de la aplicación?
+Este permite que la aplicacion tenga una mejor experiencia de usuario, sea más segura y permita un manejo adecuado de los errores y a su vez un mantenimiento del sistema mucho más facíl.
+
+¿Por qué es importante tener un manejo centralizado de excepciones en una aplicación NestJS?
+esto permite que se tenga una estrutura en como se manejan los diferentes errores, lo que permite tener una mejor trazabilidad del error.
